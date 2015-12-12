@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<style type="text/css">
+			body{
+				margin: 20% 20% 20% 20%;
+			}
+		</style>
+
+		<title>{{page_title}}</title>
+	</head>
+
+	<body>
+
+		<div class="page-header">
+  			<h1>Which is Better? <small>Compare the sentiment on just about anything!</small></h1>
+  			<h4>Which is Better compares 2 things using sentiment analysis on Twitter tweets.<br>
+			Please note that due to the nature of tweets, certain search terms might not produce accurate results.</h3>
+		</div>
+
+		<div class="panel panel-primary">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">The Twitter world has spoken!</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		{%if aGreaterb == 1%}
+		  			<p>Twitter feels {{percentage}}% happier about {{thingA}} than {{thingB}}</p>
+		  		{%elif aGreaterb == 0%}
+		  			<p>Twitter feels {{percentage}}% happier about {{thingB}} than {{thingA}}</p>
+		  		{% else %}
+		  			<p>Twitter feels indifferent between {{thingA}} and {{thingB}}</p>
+		  		{% endif %}
+		  		<p>{{thingA}} has a happiness score of: {{feelingA}} out of 4</p>
+		  		<p>{{thingB}} has a happiness score of: {{feelingB}} out of 4</p>
+		  	</div>
+		</div>
+		<a href="index" class="btn btn-success btn-md" role="button"><strong>Compare more things!</strong></a>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>{{page_title}}</title>
+</head>
+<body>
+<p> These are your search results</p>
+{% for photoDict in photos %}
+	<div class = 'photos'>
+		<img src="{{photoDict.url}}" width="{{photoDict.width}}" height="{{photoDict.height}}">
+	</div>
+{% endfor %}
+
+</body>
+</html>

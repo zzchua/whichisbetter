@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
+		<style type="text/css">
+			body{
+				margin: 20% 20% 20% 20%;
+			}
+
+			.footer{
+				height: 25%;
+				margin-top: 3%;
+				padding: 1.5% 3% 3.5% 1%;
+				background-color: #2A2730;
+
+			}
+
+			.footer p{
+				color: #99979C;
+			}
+
+			.footer a{
+				color: #FFFFFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="page-header">
+  			<h1>Which is Better? <small>Compare the sentiment on just about anything!</small></h1>
+  			<h4>Which is Better compares 2 things using sentiment analysis on Twitter tweets.<br>
+		Please note that due to the nature of tweets, certain search terms might not produce accurate results.</h3>
+		</div>
+
+
+		<form action="sResponse" method="post">
+			<div class="input-group">
+			  <span class="input-group-addon">Which is better?</span>
+			  <input type="text" class="form-control" placeholder="First thing" aria-label="thingA" name="thingA">
+			  <span class="input-group-addon">or</span>
+			  <input type="text" class="form-control" placeholder="Second thing" name="thingB">
+		      <span class="input-group-btn">
+		        <input type="submit" class="btn btn-success" name="gobtn" value="Compare!">
+		      </span>
+			</div>
+		</form>
+
+		<div class="footer">
+			<p>This application uses the <a href="http://help.sentiment140.com/api">Sentiment140 API</a> and <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> to compute results.</p>
+		</div>
+	</body>
+</html>

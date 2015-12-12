@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>{{page_title}}</title>
+</head>
+<body>
+<form action="gresponse" method="post">
+    <label for="tag">Please enter a tag:</label>
+    <input type="text" id="tag" name="tag" />
+    <br>
+    <label for="number">How many photos? (max 100)</label>
+    <input type="number" id="num" name = "num" />
+    <br>
+    <input type="submit" value="Go" name="gobtn"/> </form>
+{% if prompt %}
+<div class= 'formtitle'>{{prompt}}</div>
+{% endif %}
+</body>
+</html>
