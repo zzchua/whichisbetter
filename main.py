@@ -99,9 +99,9 @@ def searchTweets(api, queryA, queryB):
 #     lat = latlongDict['lat']
 #     long = latlongDict['long']
 #     geostr = str(lat) + "," + str(long) + "," + "5mi" 
-    cursorA = tweepy.Cursor(api.search, q=queryA, count=10)
+    cursorA = tweepy.Cursor(api.search, q=queryA, count=100)
     tweetListA = [tweet.text for page in cursorA.pages(10) for tweet in page]
-    cursorB = tweepy.Cursor(api.search, q=queryB, count=10)
+    cursorB = tweepy.Cursor(api.search, q=queryB, count=100)
     tweetListB = [tweet.text for page in cursorB.pages(10) for tweet in page]
     print len(tweetListA)
     print len(tweetListB)
