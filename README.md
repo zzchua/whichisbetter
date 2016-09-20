@@ -9,4 +9,4 @@ Using the Twitter API and Sentiment140 API, the user enters 2 keywords or search
 queries Twitter for tweets containing these words and compares the sentiments based off these keywords
 
 ### Check it out:
-whichisbetterhcde.appspot.com
+http://whichisbetterhcde.appspot.com
